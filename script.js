@@ -24,14 +24,26 @@ for (let num of String(numToArr)) {
 }
 console.log(newArrResults);
 
+// const arrayOne = [1, 2, 3];
+// const arrayTwo = ["a", "b", "c", "d"];
+// const comboArr = [];
+
+// for (let num = 0; num < arrayOne.length; num++) {
+//   for (let letter = 0; letter < arrayTwo.length; letter++) {
+//     comboArr.push([arrayOne[num], arrayTwo[letter]]);
+//     comboArr.push([arrayTwo[letter], arrayOne[num]]);
+//   }
+// }
+// console.log(comboArr);
+
 const arrayOne = [1, 2, 3];
 const arrayTwo = ["a", "b", "c", "d"];
 const comboArr = [];
 
-for (let num = 0; num < arrayOne.length; num++) {
-  for (let letter = 0; letter < arrayTwo.length; letter++) {
-    comboArr.push([arrayOne[num], arrayTwo[letter]]);
-    comboArr.push([arrayTwo[letter], arrayOne[num]]);
+for (let num of arrayOne) {
+  for (let letter of arrayTwo) {
+    comboArr.push([num, letter]);
+    comboArr.push([letter, num]);
   }
 }
 console.log(comboArr);
